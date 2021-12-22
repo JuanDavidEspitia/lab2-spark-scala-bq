@@ -61,16 +61,10 @@ object Main {
           /**
            * Instanciar la clase de Ingestion
            */
-
-
-
-
-
-
+          var ingestion =  new Ingestion(pathInput, schema, table, partition)
+          ingestion.process()
+          spark.stop()
         }
-
-
-
 
     } else {
       println("No hay argumentos para trabajar")
